@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<devices xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xmlns="http://www.5task.org/devices" xsi:schemaLocation="http://www.5task.org/devices devices.xsd">
+    <device id="d1">
+        <name>Компьютер1</name>
+        <critical>true</critical>
+        <origin>США</origin>
+        <types>
+            <port>USB</port>
+            <consumption>70</consumption>
+        </types>
+        <price>14</price>
+    </device>
+    <device id="d2">
+        <name>Компьютер2</name>
+        <critical>true</critical>
+        <origin>Китай</origin>
+        <types>
+            <port>COM</port>
+            <consumption>702</consumption>
+        </types>
+        <price>14.8</price>
+    </device>
+    <device id="d3">
+        <name>Компьютер3</name>
+        <critical>false</critical>
+        <origin>Беларусь</origin>
+        <types>
+            <port>LPT</port>
+            <consumption>31</consumption>
+        </types>
+        <price>1.4</price>
+    </device>
+
+</devices>

@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schema xmlns="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.5task.org/devices"
+        xmlns:tns="http://www.5task.org/devices" elementFormDefault="qualified">
+    <element name="devices">
+        <complexType>
+            <sequence>
+                <element name="device" maxOccurs="unbounded">
+                    <complexType>
+                        <sequence>
+                            <element name="name" type="string" />
+                            <element name="critical" type="boolean" />
+                            <element name="origin" type="string" />
+                            <element name="types">
+                                <complexType>
+                                    <sequence>
+                                        <element name="port" type="string" />
+                                        <element name="consumption">
+                                            <simpleType>
+                                                <restriction base="int">
+                                                    <minInclusive value="0" />
+                                                    <maxInclusive value="1000" />
+                                                </restriction>
+                                            </simpleType>
+                                        </element>
+                                    </sequence>
+                                </complexType>
+                            </element>
+                            <element name="price" type="double" />
+                        </sequence>
+                        <attribute name="id"  use="required">
+                            <simpleType>
+                                <restriction base="ID">
+                                    <pattern value="[a-zA-z0-9_]+"/>
+                                </restriction>
+                            </simpleType>
+                        </attribute>
+                    </complexType>
+                </element>
+            </sequence>
+        </complexType>
+    </element>
+</schema>
